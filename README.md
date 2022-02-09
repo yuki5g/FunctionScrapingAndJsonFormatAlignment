@@ -1,7 +1,7 @@
 # FunctionScrapingAndJsonFormatAlignment(ヤフオク・アマゾンの商品情報スクレイピング・JSONファイル受け渡し処理)
 
 # デモ
-デモ動画を録画してみたので、ご覧ください。
+デモ動画を録画してみたのでご覧ください。
 また、この動画で取得、表示したJsonはresult.jsonをご覧ください。
 
 https://user-images.githubusercontent.com/42097873/153265755-67957da0-2a32-4a3c-a8f8-4a8f4271e7b2.mp4
