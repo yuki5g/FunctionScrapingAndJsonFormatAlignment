@@ -19,10 +19,10 @@ jquery-3.6.0
 PHP 8.1.1
 
 # 注意点など
-///
+後ほど記載予定
 
 # 作成者
 * 作成者 Y.Y.
 
 # ライセンス
-2条項BSDライセンス(https://ja.wikipedia.org/wiki/BSD%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9)
+2条項BSDライセンス
