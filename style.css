@@ -1,0 +1,416 @@
+* {
+	padding : 0 0 0 0;
+	margin : 0 0 0 0;
+}
+
+body , html {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* ページ読み込み時アニメーション */
+  -webkit-animation: fadeIn 1.5s ease 0s 1 normal;
+  animation: fadeIn 1.5s ease 0s 1 normal;
+}
+
+h1,h2{
+  padding : 0 0 0 20px;
+  font-size: 36px;
+}
+
+h1.title{
+  color: white;
+  font-family: 'Shrikhand', cursive;
+}
+
+p.greeting{
+  color: white;
+  display: none;
+}
+
+a {
+  padding: 5px;
+  cursor: pointer;  
+}
+
+header{
+  background-color: #7F95D1;
+  padding: 5px 0;
+  display: flex;
+}
+
+.contains{margin : 20px 20px 20px 20px;}
+
+footer{
+  background-color: #7F95D1;
+  padding: 20px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+/* 検索ウィンドウ */
+.search_container{
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid gray;
+  display: block;
+  padding: 3px 10px;
+  border-radius: 3px;
+  width: 600px;
+  height: 70px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto ;
+  padding: 13px 10px;
+}
+.search_container input[type="text"]{
+  font-size:36px;
+  border: none;
+}
+.search_container input[type="text"]:focus {
+  outline: 0;
+}
+.search_container button[type="button"]{
+  font-size: 24px;
+  cursor: pointer;
+  font-family: FontAwesome;
+  border: none;
+  background: rgb(65, 131, 255);
+  color: #fff;
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  right:0px;
+  top: -5px;
+  outline : none;
+}
+
+.search_container button[type="button"]:hover{
+  background: rgb(34, 111, 255);
+}
+
+/* ヘッダーボタン */
+a.bt-samp30{
+  display: block;
+  text-decoration: none;
+  height:40px;
+  width: 110px;
+  font-size: 18px;
+  line-height: 44px;
+  text-align: center;
+  color: #fff;
+  background: #FFC0BE;
+  margin: 0px 10px 0 0px;
+  border-radius: 3px;
+
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a.bt-samp30:hover{
+  background: #FF82A9;
+}
+
+/* ページ読み込み時アニメーション */
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+/* ヘッダー構造 */
+div#title{
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+div#buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+div#greeting{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 15px 30px 10px 0px;
+}
+/* 検索情報 */
+li#result_description{
+  display: flex;
+	flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px;
+  display: none;
+}
+
+/* プロダクトカード */
+li#items{
+  display: flex;
+	flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin :2px;
+  position:relative;
+  height: 200px;
+  width: 200px;
+  overflow:hidden;
+}
+
+.card a{
+  position:absolute;
+  padding: 0;
+  height: 200px;
+  width: 200px;
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card_icon img{
+  display: inline;
+  z-index: 3;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  right: 1px;
+  top: 1px;
+}
+/* 商品名 */
+.card_title {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  position: absolute;
+  z-index: 2;
+  top:60px;
+  right:20px;
+  width:150px;
+  opacity: 0;
+  cursor: pointer;
+
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+.card_title:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+/* 値段 */
+.card_price-container1{
+  display: inline;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  background-color: rgba(107, 0, 0, 0.5);
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 2;
+  position: absolute;
+  top:145px;
+  right:89px;
+  width: 90px;
+  text-align: center;
+}
+
+.card_price-container2{
+  display: inline;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  background-color: rgba(28, 0, 94, 0.5);
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 2;
+  position: absolute;
+  top:172px;
+  right:89px;
+  width: 90px;
+  text-align: center;
+}
+
+/* 掲載元へリンク */
+.card_access{
+  display: inline;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  background-color: rgba(255, 165, 0, 0.4);
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  right: 0px;
+  width: 74px;
+  cursor: pointer;
+}
+
+/* お気に入りボタン */
+.card_favorite{
+  display: inline;
+  padding: 5px 8px 5px 8px;
+  color: white;
+  opacity: 1;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius:  50%;
+  position: absolute;
+  z-index: 2;
+  top:163px;
+  right:-3px;
+  cursor: pointer;
+}
+
+/* マウスホバー */
+.card_access:hover{
+  background-color: rgb(255, 124, 64);
+}
+.card_favorite:hover{
+  color: rgb(255, 62, 104);
+}
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  /* width: 100%; */
+  font-size: 18px;
+}
+
+.price-container {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: inline-flex;
+  -webkit-box-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  /* max-width: 100%; */
+  padding: 2px 8px 2px 4px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0px 20px 20px 0px;
+}
+
+/* ログイン */
+#btn01{
+  display: inline;
+}
+/* 登録 */
+#btn02{
+  display: inline;
+}
+/* ログアウト */
+#btn03{
+  display: inline;
+}
+
+/* タブレット表示時 */
+@media (max-width: 1024px){}
+
+/* スマホ表示時 */
+@media (max-width: 599px)
+{
+  header {
+    display: inline;
+    z-index: 9999;
+  }
+  div#buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0.4vw 0vw 0 auto;
+  }
+  div#title{
+    background-color: #7F95D1;
+    justify-content:center;
+  }
+  div#greeting{
+    justify-content:center;
+    padding: 15px 30px 10px 0px;
+  }
+  .search_container {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+  }
+  .search_container input[type="text"] {
+    font-size: 24px;
+    border: none;
+  }
+  .search_container button[type="button"] {
+    font-size: 18px;
+    width: 80px;
+    height: 60px;
+  }
+  /* アイテム */
+  .card,.card a,.card img{
+    width: 100%;
+  }
+  .card_icon img{
+    width: 36px;
+    height: 36px;
+
+  }
+  .card_access {
+    font-size: 18px;
+    width: 110px;
+  }
+  .card_favorite {
+    font-size: 36px;
+    top: 148px;
+  }
+  .card_price-container1 {
+  top: 125px;
+  width: 150px;
+  font-size: 18px;
+  left: 0;  
+  }
+  .card_price-container2 {
+    top: 162px;
+    width: 150px;
+    font-size: 18px;
+    left: 0;  
+  }
+
+  .card_title:hover{
+    opacity: 0;
+  }
+}
