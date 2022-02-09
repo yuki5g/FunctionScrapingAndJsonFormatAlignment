@@ -4,6 +4,8 @@
 
 "hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
 
+![demo](https://github.com/yuki5g/FunctionScrapingAndJsonFormatAlignment/issues/1#issue-1128885403)
+
 # Features
 検索ワードから商品情報(商品名、値段、画像1枚)を抜粋し取得します。
 ソースの例では処理に時間がかかるため、検索数を上限10件に制限し処理結果を表示しています。
